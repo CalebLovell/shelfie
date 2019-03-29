@@ -11,6 +11,10 @@ class Product extends Component {
                     <p>{this.props.product_name}</p>
                     <p>{this.props.price}</p>
                 </div>
+                <div className="button-box">
+                    <button>Edit</button>
+                    <button>Delete</button>
+                </div>
             </div>
         )
     }

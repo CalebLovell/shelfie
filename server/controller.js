@@ -2,7 +2,7 @@ module.exports = {
     getAllProducts: (req, res) => {
         req.app
             .get('db')
-            .get_inventory()
+            .get_inventory(this)
             .then((products) => {
                 res.status(200).send(products)
             });
@@ -13,8 +13,8 @@ module.exports = {
         req.app
             .get('db')
             .create_product([imageURL, product_name, price])
-            .then((product) => {
-                res.status(200).send(product)
+            .then((products) => {
+                res.status(200).send(products)
             });
     },
 };

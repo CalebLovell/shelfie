@@ -12,9 +12,10 @@ class App extends Component {
     this.state = {
       products: [],
     };
+    this.getInventory = this.getInventory.bind(this);
   };
 
-  getInventory = () => {
+  getInventory() {
     axios
       .get(`/api/inventory`)
       .then(res => {

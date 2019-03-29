@@ -36,7 +36,13 @@ class Form extends Component {
         e.preventDefault();
         axios
             .post('/api/product', this.state)
-            .then(res => {console.log(`it worked ??`)})
+            .then(res => {
+                this.setState({
+                    imageURL: '',
+                    product_name: '',
+                    price: 0,
+                });
+            })
             .catch(err => console.log(`¿que hiciste pendejo?: ${err} `));
         this.props.getInventory();
         this.handleCancel();
