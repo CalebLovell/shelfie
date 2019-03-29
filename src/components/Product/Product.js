@@ -3,7 +3,13 @@ import React, { Component } from 'react'
 class Product extends Component {
     render() {
         return (
-            <div>Product</div>
+            <div className="product">
+                <div className="product-img-prev">pic</div>
+                <div className="p-box">
+                    <p>a</p>
+                    <p>a</p>
+                </div>
+            </div>
         )
     }
 }
