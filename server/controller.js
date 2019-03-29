@@ -8,7 +8,7 @@ module.exports = {
             });
     },
     addProduct: (req, res) => {
-        console.log((req.body))
+        // console.log((req.body))
         const { imageURL, product_name, price } = req.body
         req.app
             .get('db')
@@ -16,5 +16,7 @@ module.exports = {
             .then((products) => {
                 res.status(200).send(products)
             });
+    },
+    deleteProduct: (req, res) => {
     },
 };

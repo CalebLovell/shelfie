@@ -1,6 +1,19 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import axios from 'axios';
 
 class Product extends Component {
+    constructor() {
+        super();
+
+        this.state = {
+
+        }
+    };
+
+    deleteProduct = (e) => {
+        e.preventDefault();
+    };
+
     render() {
         return (
             <div className="product">
@@ -13,7 +26,7 @@ class Product extends Component {
                 </div>
                 <div className="button-box">
                     <button>Edit</button>
-                    <button>Delete</button>
+                    <button onClick={this.deleteProduct}>Delete</button>
                 </div>
             </div>
         )
