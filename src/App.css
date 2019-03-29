@@ -85,6 +85,11 @@ header>h1 {
   border: 1px solid white;
 }
 
+.product-img-prev img {
+  width: 100%;
+  height: 100%;
+}
+
 .p-box {
   display: flex;
   justify-content: space-around;

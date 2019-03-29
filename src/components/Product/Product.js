@@ -4,10 +4,12 @@ class Product extends Component {
     render() {
         return (
             <div className="product">
-                <div className="product-img-prev">pic</div>
+                <div className="product-img-prev">
+                    <img src={`${this.props.imageURL}`} alt="randomized productPicture" />
+                </div>
                 <div className="p-box">
-                    <p>a</p>
-                    <p>a</p>
+                    <p>{this.props.product_name}</p>
+                    <p>{this.props.price}</p>
                 </div>
             </div>
         )

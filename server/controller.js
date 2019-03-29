@@ -8,11 +8,13 @@ module.exports = {
             });
     },
     addProduct: (req, res) => {
+        console.log((req.body))
+        const { imageURL, product_name, price } = req.body
         req.app
             .get('db')
             .create_product([imageURL, product_name, price])
-            .then(() => {
-                res.status(200).send(`Product Added!`)
+            .then((product) => {
+                res.status(200).send(product)
             });
     },
 };
