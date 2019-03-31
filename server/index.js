@@ -4,8 +4,7 @@ const massive = require('massive');
 const app = express();
 const controller = require('./controller');
 const { SERVER_PORT, CONNECTION_STRING } = process.env
-const { json } = require('body-parser');
-app.use(json());
+app.use(express.json())
 
 massive(CONNECTION_STRING).then((db) => {
     app.set('db', db)
